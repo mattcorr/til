@@ -1,3 +1,10 @@
-# This is the summary for now.
+# Summary
 
-Not much here hey?
+* powershell
+    * [the basics](/powershell/the_basics.md)
+* octopus
+    * [octopus info](/octopus/octopus-info.md)
+
+---
+
+    
