@@ -1,23 +1,27 @@
 
-# How to uninstall an application in PowerShell
+# How to uninstall a BizTalk application in PowerShell
 
-Need to do the following:
-Stop the application
-Remove the application
-Uninstall the application (from add remove programs)
+It can be handy as part of a BizTalk application deployment to remove an old or newer version there.
+
+Would need to do the following:
+* Stop the application
+* Remove the application
+* Uninstall the application (from add remove programs)
 
 
-Note. need to run all these in 32 bt PowerShell.
+**Note:** Need to run all these in 32 bit PowerShell.
 
 ## Stop the Application
 The best way to do this is to use the BizTalk PowerShell module.
 
 ```powershell
+TODO
 ```
 
 ## Remove the application
 The same as above.
 ```powershell
+TODO
 ```
 
 ## Remove the application
