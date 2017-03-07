@@ -8,7 +8,7 @@
 	* [Check if an AD account is locked](./powershell/account-locked-status.md)
 	* [How to determine server uptime](./powershell/get-server-uptime.md)
 	* [PowerShell basics](./powershell/the_basics.md)
-	* [How to uninstall an application in PowerShell](./powershell/uninstall-an-app.md)
+	* [How to uninstall a BizTalk application](./powershell/uninstall-an-app.md)
 * soapui
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
 

@@ -1,5 +1,5 @@
 
-# How to uninstall a BizTalk application in PowerShell
+# How to uninstall a BizTalk application
 
 It can be handy as part of a BizTalk application deployment to remove an old or newer version there.
 
