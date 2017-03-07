@@ -1,5 +1,7 @@
 # Summary
 
+* iis
+    * [recreate virtual directories](/iis/recreate-virtual-dirs.md)
 * octopus
     * [octopus info](/octopus/octopus-info.md)
 * powershell
