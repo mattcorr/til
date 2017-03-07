@@ -12,6 +12,8 @@ Even if it is deleted and IIS restarted this can still cause issues.
 
 One work-around is to rename the site to something else.
 
+# How to re-create IIS Virtual Directories2
+# How to re-create IIS Virtual Directories3
 Or you can delete this file:
 
 ```

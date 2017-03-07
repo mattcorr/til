@@ -1,16 +1,16 @@
-# Summary
+﻿# Summary
 
 * iis
-    * [recreate virtual directories](/iis/recreate-virtual-dirs.md)
+	* [How to re-create IIS Virtual Directories](./iis/recreate-virtual-dirs.md)
 * octopus
-    * [octopus info](/octopus/octopus-info.md)
+	* [Summary about Octopus](./octopus/octopus-info.md)
 * powershell
-    * [the basics](/powershell/the_basics.md)
-    * [check if an account is locked](/powershell/account-locked-status.md)
+	* [Check if an AD account is locked](./powershell/account-locked-status.md)
+	* [How to determine server uptime](./powershell/get-server-uptime.md)
+	* [PowerShell basics](./powershell/the_basics.md)
+	* [How to uninstall an application in PowerShell](./powershell/uninstall-an-app.md)
 * soapui
-    * [settings for WCF_WSHttp endpoints](/soapui/how-to-send-towcf-wshttp.md)
-
+	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
 
 ---
 
-    
