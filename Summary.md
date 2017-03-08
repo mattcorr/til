@@ -13,6 +13,6 @@
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
 
 ---
-_34 TILs and counting!_
+* _34 TILs and counting!_
 ---
 
