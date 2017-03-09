@@ -2,19 +2,22 @@
 # How to uninstall a BizTalk application
 
 It can be handy as part of a BizTalk application deployment to remove an old or newer version there.
-This assumes you use the BTDF for deploying an application.
+This assumes you use the [BTDF](https://biztalkdeployment.codeplex.com/) for deploying an application.
 
-When you use BTDF, it installs in the windows menu an option to undeploy the application. 
+When you use BTDF, it installs the windows menu, a selectable option to un-deploy the application. 
 
-The script below simulates stopping the BizTalk application and then undeploying the application from the server.
+The script below simulates stopping the BizTalk application and then un-deploying the application from the server.
 
-Would need to do the following:
-* Stop the application
-* Uninstall the application (from add remove programs)
+**Note:** Need to run all these in 32 bit PowerShell. _Why??_ This is due to BizTalk PowerShell requiring 32 bit to access its features correctly.
 
-**Note:** Need to run all these in 32 bit PowerShell.
+Because of this requirement, we need to wrap the script in a code block. More info about how to do that [here](./running-32bit-within-64bit.html).
 
-Because of the 32 bit Powershell requirement, we need to wrap the script in a code block. More info about that [here](./running-32bit-within-64bit.html).
+The following assumptions are made in the script below:
+
+* There is a fixed installation path.
+* BizTalk 2016 is being used.
+* BizTalk is installed on either C or D drive.
+
 
 ```powershell
 param (
@@ -34,14 +37,12 @@ param (
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
-
 Write-Host "Loading BizTalk PowerShell..."
-# Load Biztalk PowerShell
 if ((Get-Module -Name "BizTalkFactory.PowerShell.Extensions") -eq $null) 
 {
     Write-Host "Initialising BizTalkFactory.PowerShell.Extensions..." 
     $InitializeDefaultBTSDrive = $false
-    # check the two locations that Biztalk 2016 could be installed
+    # check the two locations that BizTalk 2016 could be installed
     if (Test-Path "D:\Program Files (x86)\Microsoft BizTalk Server 2016\SDK\Utilities\PowerShell\BizTalkFactory.PowerShell.Extensions.dll" -PathType Leaf)
     {
         $BizTalkPSDll = "D:\Program Files (x86)\Microsoft BizTalk Server 2016\SDK\Utilities\PowerShell\BizTalkFactory.PowerShell.Extensions.dll"
@@ -59,8 +60,7 @@ If (Test-Path BizTalk:)
 	Remove-PSDrive -Name "BizTalk"
 }
 
-# create the PS-Drive, get the application names and remove the ps drive
-# PsDrive Name cannot contain special chars like dot. Root must begin with Name. Using generic Name of "BizTalk"
+# create the PS-Drive
 $output = New-PSDrive -Name "BizTalk" -PSProvider BizTalk -Root "BizTalk:\" -Instance $BiztalkSQlServer -Database BizTalkMgmtDb -Scope Global
 
 if ($output -eq $null)
@@ -97,7 +97,7 @@ if ((Test-Path $appInstallPath -PathType Container) -eq $false)
 $projFile = Join-Path -Path $appInstallPath  -ChildPath "\Deployment\Deployment.btdfproj"
 $undeployArgs = @("`"$projFile`"", "/p:DeployBizTalkMgmtDB=$DeployDb;Configuration=Server;InstallDir=`"$appInstallPath`"", "/target:Undeploy")
 
-Write-Host "For undeployment running: $msBuildPath $undeployArgs" -f 
+Write-Host "For un-deployment running: $msBuildPath $undeployArgs" -f 
 & $msBuildPath $undeployArgs
 
 Write-Host " All done"
