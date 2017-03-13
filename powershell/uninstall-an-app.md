@@ -27,83 +27,126 @@ param (
     [string] $msBuildPath
 )
 
+# All functionality in this file is in the code block (a bit unusual, but needed so we can call it in 32 bit powershell)
 $powershell32bitCode = {
 param (
     [string] $ApplicationName,
+    [string] $ApplicationVersion,
     [string] $BiztalkSQlServer = ".",
     [string] $DeployDb,
     [string] $msBuildPath
 )
 
-# ---------------------------------------------------------------------------------------------------------------------------------------------
+[System.Version]$compareVersion = $ApplicationVersion   
 
-Write-Host "Loading BizTalk PowerShell..."
-if ((Get-Module -Name "BizTalkFactory.PowerShell.Extensions") -eq $null) 
-{
-    Write-Host "Initialising BizTalkFactory.PowerShell.Extensions..." 
-    $InitializeDefaultBTSDrive = $false
-    # check the two locations that BizTalk 2016 could be installed
-    if (Test-Path "D:\Program Files (x86)\Microsoft BizTalk Server 2016\SDK\Utilities\PowerShell\BizTalkFactory.PowerShell.Extensions.dll" -PathType Leaf)
-    {
-        $BizTalkPSDll = "D:\Program Files (x86)\Microsoft BizTalk Server 2016\SDK\Utilities\PowerShell\BizTalkFactory.PowerShell.Extensions.dll"
-    }
-    else
-    {
-        $BizTalkPSDll = "C:\Program Files (x86)\Microsoft BizTalk Server 2016\SDK\Utilities\PowerShell\BizTalkFactory.PowerShell.Extensions.dll"
-    }
-    Import-Module $BizTalkPSDll -DisableNameChecking
-    }
+Write-Host "Checking current application '$ApplicationName' v$ApplicationVersion."
+# search to see if there are any versions already installed on the target machine
+$existingApps =  Get-ItemProperty HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object DisplayName -like "$ApplicationName *" | select DisplayName, DisplayVersion
 
-# Ensure no drive exists already
-If (Test-Path BizTalk:)
+if ($existingApps -ne $null)
 {
-	Remove-PSDrive -Name "BizTalk"
-}
+	Write-Host "Have found $ApplicationName already installed."
+	foreach ($app in $existingApps)
+	{
+		Write-Host "Checking existing: '$($app.DisplayName)'. Version: $($app.DisplayVersion)..."
+		[System.Version]$version = $app.DisplayVersion
+		if ($version -gt $compareVersion)
+		{
+	        Write-Host "Newer version of '$ApplicationName' have been detected. Attempting to undeploy."
+            
+		    Write-Host "Loading BizTalk PowerShell..."
+            # Load Biztalk PowerShell
+            if ((Get-Module -Name "BizTalkFactory.PowerShell.Extensions") -eq $null) 
+            {
+                Write-Host "Initialising BizTalkFactory.PowerShell.Extensions..." 
+                $InitializeDefaultBTSDrive = $false
+                # check the two locations that BizTalk 2016 could be installed
+                if (Test-Path "D:\Program Files (x86)\Microsoft BizTalk Server 2016\SDK\Utilities\PowerShell\BizTalkFactory.PowerShell.Extensions.dll" -PathType Leaf)
+                {
+                    $BizTalkPSDll = "D:\Program Files (x86)\Microsoft BizTalk Server 2016\SDK\Utilities\PowerShell\BizTalkFactory.PowerShell.Extensions.dll"
+                }
+                else
+                {
+                    $BizTalkPSDll = "C:\Program Files (x86)\Microsoft BizTalk Server 2016\SDK\Utilities\PowerShell\BizTalkFactory.PowerShell.Extensions.dll"
+                }
+                Import-Module $BizTalkPSDll -DisableNameChecking
+                }
 
-# create the PS-Drive
-$output = New-PSDrive -Name "BizTalk" -PSProvider BizTalk -Root "BizTalk:\" -Instance $BiztalkSQlServer -Database BizTalkMgmtDb -Scope Global
+            # Ensure no drive exists already
+            If (Test-Path BizTalk:)
+            {
+	            Remove-PSDrive -Name "BizTalk"
+            }
 
-if ($output -eq $null)
-{
-    Write-Error "Unable to create the PS Drive to query the Biztalk environment. Check permissions and networks to ensure you have access from this PC to $BiztalkSQlServer ." -ErrorAction Stop
-    return
-}
+            # create the PS-Drive, get the application names and remove the ps drive
+            # PsDrive Name cannot contain special chars like dot. Root must begin with Name. Using generic Name of "BizTalk"
+            $output = New-PSDrive -Name "BizTalk" -PSProvider BizTalk -Root "BizTalk:\" -Instance $BiztalkSQlServer -Database BizTalkMgmtDb -Scope Global
 
-Write-Host "Searching for BizTalk application $ApplicationName..."
-$app = Get-ChildItem -Path 'BizTalk:\Applications' | Where-Object Name -eq $ApplicationName
-# Stop the application
-if ($app -eq $null) 
-{
-    Write-Error "Unable to find a BizTalk applications with name '$ApplicationName'. Check the configuration and try again." -ErrorAction Stop
-}
-if ($app.Status -ne "Stopped")
-{
-    Write-Host "Stopping $ApplicationName app..."
-    $app | Stop-Application -StopOption StopAll 
+            if ($output -eq $null)
+            {
+                Write-Error "Unable to create the PS Drive to query the Biztalk environment. Check permissions and networks to ensure you have access from this PC to $BiztalkSQlServer ." -ErrorAction Stop
+                return
+            }
+
+            Write-Host "Searching for BizTalk application $ApplicationName..."
+            $app = Get-ChildItem -Path 'BizTalk:\Applications' | Where-Object Name -eq $ApplicationName
+            # Stop the application
+            if ($app -eq $null) 
+            {
+                Write-Error "Unable to find a BizTalk applications with name '$ApplicationName'. Check the configuration and try again." -ErrorAction Stop
+            }
+            if ($app.Status -ne "Stopped")
+            {
+                Write-Host "Stopping $ApplicationName app..."
+                $app | Stop-Application -StopOption StopAll 
+            }
+            else
+            {
+                Write-Host "BizTalk application $ApplicationName is already stopped."
+            }
+
+            # uninstall the application
+            $appInstallPath =  "C:\Program Files (x86)\$ApplicationName for BizTalk\1.0"
+
+            if ((Test-Path $appInstallPath -PathType Container) -eq $false)
+            {
+                Write-Error "Unable to find folder $appInstallPath to uninstall the application." -ErrorAction Stop
+            }
+
+            $projFile = Join-Path -Path $appInstallPath  -ChildPath "\Deployment\Deployment.btdfproj"
+            $undeployArgs = @("`"$projFile`"", "/p:DeployBizTalkMgmtDB=$DeployDb;Configuration=Server;InstallDir=`"$appInstallPath`"", "/target:Undeploy")
+
+            Write-Host "For undeployment running: $msBuildPath $undeployArgs"
+            & $msBuildPath $undeployArgs
+            
+            # uninstall the application from the control panel
+            $uninstallString = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object DisplayName -eq "$ApplicationName for BizTalk" | Select-Object -ExpandProperty UninstallString
+            if ($uninstallString -eq $null)
+            {
+                Write-Error "Unable to find the Application $ApplicatioName in the Control Panel Add/Remove programs..." -ErrorAction Stop
+            }
+            $uninstallCode = ($uninstallString -split ' ')[1]
+            $args = @($uninstallCode, "/quiet")
+
+            & "msiexec.exe" $args
+            Write-Host "Uninstall of $ApplicationName complete."
+		}
+		else
+		{
+		    Write-Host "No later versions of '$ApplicationName' have been detected. Continuing the installation."
+		}
+	}
 }
 else
 {
-    Write-Host "BizTalk application $ApplicationName is already stopped."
+	Write-Host "No previous installations of '$ApplicationName' have been detected. Continuing the installation."
 }
 
-# uninstall the application
-$appInstallPath =  "C:\Program Files (x86)\$ApplicationName for BizTalk\1.0"
-
-if ((Test-Path $appInstallPath -PathType Container) -eq $false)
-{
-    Write-Error "Unable to find folder $appInstallPath to uninstall the application." -ErrorAction Stop
 }
-
-$projFile = Join-Path -Path $appInstallPath  -ChildPath "\Deployment\Deployment.btdfproj"
-$undeployArgs = @("`"$projFile`"", "/p:DeployBizTalkMgmtDB=$DeployDb;Configuration=Server;InstallDir=`"$appInstallPath`"", "/target:Undeploy")
-
-Write-Host "For un-deployment running: $msBuildPath $undeployArgs" -f 
-& $msBuildPath $undeployArgs
-
-Write-Host " All done"
-}
-
-# The only actual line in the script. It will run all the code above in a PowerShell 32 bit session. This is required for the Biztalk PowerShell.
-Invoke-Command -ScriptBlock $powershell32bitCode -ArgumentList @($ApplicationName, $BiztalkSQlServer, $DeployDb, $msBuildPath) -ConfigurationName microsoft.powershell32 -ComputerName $env:COMPUTERNAME
+# ------------------------------------------------------------------------------------------------------------------------------------------------
+# MAIN 
+# ------------------------------------------------------------------------------------------------------------------------------------------------
+# It will run all the code above in a PowerShell 32 bit session. This is required for the Biztalk PowerShell
+Invoke-Command -ScriptBlock $powershell32bitCode -ArgumentList @($ApplicationName, $ApplicationVersion, $BiztalkSQlServer, $DeployDb, $msBuildPath) -ConfigurationName microsoft.powershell32 -ComputerName $env:COMPUTERNAME
 ```
 
