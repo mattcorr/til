@@ -11,6 +11,8 @@
 	* [How to run powershell in 32 bit mode within 64 bit](./powershell/running-32bit-within-64bit.md)
 	* [PowerShell basics](./powershell/the_basics.md)
 	* [How to uninstall a BizTalk application](./powershell/uninstall-an-app.md)
+* servicefabric
+	* [How to query Service Fabric via PowerShell](./servicefabric/How-to-query-via-ps.md)
 * soapui
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
 
