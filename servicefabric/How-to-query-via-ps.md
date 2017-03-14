@@ -1,6 +1,6 @@
 # How to query Service Fabric via PowerShell
 
-Install the Microsoft Service Fabric SDK and Tools on your local dev VM.
+Install the latest version of the **Microsoft Service Fabric SDK and Tools** on your local dev VM via the [Web Platform Tools](https://www.microsoft.com/web/downloads/platform.aspx).
 
 This will include the ServiceFabric PowerShell module.
 
