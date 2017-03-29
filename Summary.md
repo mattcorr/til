@@ -14,6 +14,7 @@
 * servicefabric
 	* [How to create a single node cluster (offline)](./servicefabric/How-to-create-single-node-cluster.md)
 	* [How to query Service Fabric via PowerShell](./servicefabric/How-to-query-via-ps.md)
+	* [Working with Service Fabric stateless WebAPI services](./servicefabric/Working-with-stateless-webapi-code.md)
 * soapui
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
 
