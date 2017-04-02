@@ -12,6 +12,7 @@
 	* [PowerShell basics](./powershell/the_basics.md)
 	* [How to uninstall a BizTalk application](./powershell/uninstall-an-app.md)
 * servicefabric
+	* [How to configure HTTPS endpoints in WebAPI services](./servicefabric/How-to-configure-https-endpoints.md)
 	* [How to create a single node cluster (offline)](./servicefabric/How-to-create-single-node-cluster.md)
 	* [How to query Service Fabric via PowerShell](./servicefabric/How-to-query-via-ps.md)
 	* [Working with Service Fabric stateless WebAPI services](./servicefabric/Working-with-stateless-webapi-code.md)
