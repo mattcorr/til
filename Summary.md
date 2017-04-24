@@ -1,5 +1,7 @@
 ﻿# Summary
 
+* biztalk
+	* [How to create Simple Types in XSD files](./biztalk/create-simple-types-in-xsd.md)
 * iis
 	* [How to re-create IIS Virtual Directories](./iis/recreate-virtual-dirs.md)
 * octopus
