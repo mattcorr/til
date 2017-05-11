@@ -8,4 +8,4 @@ Get-ItemProperty -name Version -ErrorAction 0 |  Where-Object { $_.PSChildName -
 Select PSChildName, Version | Sort-Object -Property Version -Descending)
 ```
 
-**HINT:** You can also put thin as a remote script block if you want to queries the versions of .NET installed across many servers.
+**HINT:** You can also put this script as a remote script block if you want to query the .NET versions installed across many servers.
