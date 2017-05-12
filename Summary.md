@@ -23,7 +23,7 @@
 * soapui
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
 * vscode
-	* [Configure Visual Studio Code settings to auto format PowerShell code](./vscode/powershell-settings.md)
+	* [Configure settings to auto format PowerShell code](./vscode/powershell-settings.md)
 
 ---
 
