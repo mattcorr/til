@@ -16,4 +16,4 @@ foreach ($directory in $directories)
 }
 $summaryText += "`n---`n"
 $summaryText | Out-File -FilePath './Summary.md' -Encoding utf8
-Write-Host "Summary.md updated!" -f Green
+Write-Host "Summary.md updated!" -f Green 

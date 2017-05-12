@@ -22,6 +22,8 @@
 	* [Working with Service Fabric stateless WebAPI services](./servicefabric/Working-with-stateless-webapi-code.md)
 * soapui
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
+* vscode
+	* [Configure Visual Studio Code settings to auto format PowerShell code](./vscode/powershell-settings.md)
 
 ---
 
