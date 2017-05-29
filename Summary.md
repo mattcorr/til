@@ -19,6 +19,7 @@
 	* [How to configure HTTPS endpoints in WebAPI services](./servicefabric/How-to-configure-https-endpoints.md)
 	* [How to create a single node cluster (offline)](./servicefabric/How-to-create-single-node-cluster.md)
 	* [How to query Service Fabric via PowerShell](./servicefabric/How-to-query-via-ps.md)
+	* [Where to find stand alone packages for Service Fabric](./servicefabric/Where-to-find-stand-alone-packages.md)
 	* [Working with Service Fabric stateless WebAPI services](./servicefabric/Working-with-stateless-webapi-code.md)
 * soapui
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
