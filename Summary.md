@@ -14,6 +14,7 @@
 	* [How to determine server uptime](./powershell/get-server-uptime.md)
 	* [How to install BizTalk roles and features via PowerShell](./powershell/install-biztalk-rolesfeatures.md)
 	* [How to run powershell in 32 bit mode within 64 bit](./powershell/running-32bit-within-64bit.md)
+	* [Set Powershell to skip SSL certificate checks](./powershell/ssl-cert-bypass.md)
 	* [PowerShell basics](./powershell/the_basics.md)
 	* [How to uninstall a BizTalk application](./powershell/uninstall-an-app.md)
 	* [How to use a Select-Object to create your custom object array for you](./powershell/use-select-object-to-customise-array.md)
