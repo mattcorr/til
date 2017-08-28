@@ -2,6 +2,8 @@
 
 * biztalk
 	* [How to create Simple Types in XSD files](./biztalk/create-simple-types-in-xsd.md)
+* git
+	* [How to get the latest changes from git before you do a commit](./git/resync-correctly.md)
 * iis
 	* [How to re-create IIS Virtual Directories](./iis/recreate-virtual-dirs.md)
 * nuget
