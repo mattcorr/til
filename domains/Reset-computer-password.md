@@ -11,6 +11,7 @@ If you get the above error, log into the VM in question with an admin account (l
 $creds = Get-Credential
 Reset-ComputerMachinePassword -Server <domain controller> -Credentials $creds
 ```
+_NOTE: You will just need to replace `<domain controller>` with the name of the domain server on your network.
 
 When prompted for a account provide a domain admin account
 
