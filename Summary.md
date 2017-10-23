@@ -4,6 +4,8 @@
 	* [How to create Simple Types in XSD files](./biztalk/create-simple-types-in-xsd.md)
 * domains
 	* [How to reset your computer if it is lost on the domain](./domains/Reset-computer-password.md)
+* dotnet
+	* [Differences between .net standard and .net core and .net framework?](./dotnet/dotnetversions.md)
 * git
 	* [How to get the latest changes from git before you do a commit](./git/resync-correctly.md)
 * iis
