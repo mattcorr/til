@@ -19,4 +19,4 @@ Errors like this are really puzzling as builds that worked in the past are now n
 
 ## Solution
 **This means your working folder on the Build Agent is corrupted. The best option is to delete the work folder.
-(this normally is C:\agent\_work)**
+(this normally is C:\agent\\_work)**
