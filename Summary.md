@@ -35,6 +35,8 @@
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
 * vscode
 	* [Configure settings to auto format PowerShell code](./vscode/powershell-settings.md)
+* vsts
+	* [TFS or VSTS Build unable to start.](./vsts/build-unable-tostart.md)
 
 ---
 
