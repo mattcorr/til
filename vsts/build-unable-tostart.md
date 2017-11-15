@@ -1,8 +1,9 @@
 # TFS or VSTS Build unable to start.
 
 ## Issue
-If you have a well defined build process, and yet your build is failing in the Initalize Job step with error messages like:
-Errors like this are really puzzling as builds that worked in the past are now no longer working.
+If you have a well defined build process, and yet your build is failing in the **Initalize Job** step with error messages like as shown below.
+
+Issues like this are really puzzling as builds that worked in the past are now no longer working and it seems like nothing has changed!?
 
 ```
 2017-11-15T11:31:09.4021313Z ##[section]Starting: Initialize Job
@@ -18,5 +19,4 @@ Errors like this are really puzzling as builds that worked in the past are now n
 ```
 
 ## Solution
-**This means your working folder on the Build Agent is corrupted. The best option is to delete the work folder.
-(this normally is C:\agent\\_work)**
+This means your working folder on the Build Agent is corrupted. The best option is to delete the work folder *(this normally is C:\agent\\_work)* and trigger a new build.
