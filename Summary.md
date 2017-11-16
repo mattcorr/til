@@ -14,6 +14,7 @@
 	* [Nuget and Proxies](./nuget/nuget-and-proxies.md)
 * octopus
 	* [Summary about Octopus](./octopus/octopus-info.md)
+	* [Error logging in Octopus](./octopus/useful-logging.md)
 * powershell
 	* [Check if an AD account is locked](./powershell/account-locked-status.md)
 	* [Check .NET Framework versions installed](./powershell/check-dotnet-version.md)
