@@ -19,6 +19,7 @@
 	* [Check if an AD account is locked](./powershell/account-locked-status.md)
 	* [Check .NET Framework versions installed](./powershell/check-dotnet-version.md)
 	* [How to determine server uptime](./powershell/get-server-uptime.md)
+	* [How to check the system up time](./powershell/get-system-uptime.md)
 	* [How to install BizTalk roles and features via PowerShell](./powershell/install-biztalk-rolesfeatures.md)
 	* [How to run powershell in 32 bit mode within 64 bit](./powershell/running-32bit-within-64bit.md)
 	* [Set Powershell to skip SSL certificate checks](./powershell/ssl-cert-bypass.md)
