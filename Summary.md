@@ -18,6 +18,7 @@
 * powershell
 	* [Check if an AD account is locked](./powershell/account-locked-status.md)
 	* [Check .NET Framework versions installed](./powershell/check-dotnet-version.md)
+	* [How to enable PS Remoting](./powershell/enable-psremoting.md)
 	* [How to determine server uptime](./powershell/get-server-uptime.md)
 	* [How to check the system up time](./powershell/get-system-uptime.md)
 	* [How to install BizTalk roles and features via PowerShell](./powershell/install-biztalk-rolesfeatures.md)
