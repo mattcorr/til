@@ -1,5 +1,7 @@
 ﻿# Summary
 
+* azure
+	* [How to apply tags to all resources in your subscription](./azure/apply-tags-to-resource.md)
 * biztalk
 	* [How to create Simple Types in XSD files](./biztalk/create-simple-types-in-xsd.md)
 * domains
