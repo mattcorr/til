@@ -4,6 +4,7 @@
 	* [How to apply tags to all resources in your subscription](./azure/apply-tags-to-resource.md)
 * biztalk
 	* [How to create Simple Types in XSD files](./biztalk/create-simple-types-in-xsd.md)
+	* [How to reset your SSO secret](./biztalk/reset-sso-secret.md)
 * domains
 	* [How to reset your computer if it is lost on the domain](./domains/Reset-computer-password.md)
 * dotnet
