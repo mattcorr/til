@@ -1,5 +1,7 @@
 # How to install PowerShell core on MacOS
 
+NOTE: Original instructions are [here](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md), I have just duplicated here for easy access.
+
 ## How to install
 Do the following from the macOS console:
 
