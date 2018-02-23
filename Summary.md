@@ -1,9 +1,10 @@
-﻿# Summary
+# Summary
 
 * azure
 	* [How to apply tags to all resources in your subscription](./azure/apply-tags-to-resource.md)
 * biztalk
 	* [How to create Simple Types in XSD files](./biztalk/create-simple-types-in-xsd.md)
+	* [How to reset your SSO secret](./biztalk/reset-sso-secret.md)
 * domains
 	* [How to reset your computer if it is lost on the domain](./domains/Reset-computer-password.md)
 * dotnet
@@ -23,6 +24,7 @@
 	* [How to enable PS Remoting](./powershell/enable-psremoting.md)
 	* [How to determine server uptime](./powershell/get-server-uptime.md)
 	* [How to check the system up time](./powershell/get-system-uptime.md)
+	* [How to install PowerShell core on MacOS](./powershell/how-to-install-powershell-on-macos.md)
 	* [How to install BizTalk roles and features via PowerShell](./powershell/install-biztalk-rolesfeatures.md)
 	* [How to run powershell in 32 bit mode within 64 bit](./powershell/running-32bit-within-64bit.md)
 	* [Set Powershell to skip SSL certificate checks](./powershell/ssl-cert-bypass.md)
