@@ -17,6 +17,7 @@
 	* [Nuget and Proxies](./nuget/nuget-and-proxies.md)
 * octopus
 	* [Summary about Octopus](./octopus/octopus-info.md)
+	* [How to update the deployment state in Octopus](./octopus/update-deployment-state.md)
 	* [Error logging in Octopus](./octopus/useful-logging.md)
 * powershell
 	* [Check if an AD account is locked](./powershell/account-locked-status.md)
