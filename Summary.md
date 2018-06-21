@@ -27,6 +27,7 @@
 	* [How to check the system up time](./powershell/get-system-uptime.md)
 	* [How to install PowerShell core on MacOS](./powershell/how-to-install-powershell-on-macos.md)
 	* [How to install BizTalk roles and features via PowerShell](./powershell/install-biztalk-rolesfeatures.md)
+	* [How to query the Internet behind a NTLM Proxy on a corporate network](./powershell/net-access-behind-a-firewall.md)
 	* [How to run powershell in 32 bit mode within 64 bit](./powershell/running-32bit-within-64bit.md)
 	* [Set Powershell to skip SSL certificate checks](./powershell/ssl-cert-bypass.md)
 	* [PowerShell basics](./powershell/the_basics.md)
