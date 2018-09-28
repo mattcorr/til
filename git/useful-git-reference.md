@@ -28,5 +28,5 @@ git config --global http.fullsitename.proxy "http://account:password@proxy:port"
 ```
 A sample of the above:
 ```
-git config --global http.https://dev.azure.com.proxy "http://boq%5Caccountname:password@10.64.2.217:8080"
+git config --global http.https://dev.azure.com.proxy "http://mattcorr:password@10.64.2.217:8080"
 ```
