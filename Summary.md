@@ -11,6 +11,7 @@
 	* [Differences between .net standard and .net core and .net framework?](./dotnet/dotnetversions.md)
 * git
 	* [How to get the latest changes from git before you do a commit](./git/resync-correctly.md)
+	* [Git command reference](./git/useful-git-reference.md)
 * iis
 	* [How to re-create IIS Virtual Directories](./iis/recreate-virtual-dirs.md)
 * nuget
