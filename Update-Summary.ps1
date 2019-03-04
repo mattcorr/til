@@ -1,8 +1,10 @@
 Write-Host "Starting..." 
-$files = Get-ChildItem -Path . -Recurse -File | Where-Object {$_.DirectoryName -notlike  "*images*" -and $_.DirectoryName -notlike "*til"}
+$files = Get-ChildItem -Path . -Recurse -File | Where-Object {$_.DirectoryName -notlike  "*images*" -and
+                                                              $_.DirectoryName -notlike "*til"}
 $directories = $files.Directory | Select-Object -ExpandProperty name | Sort-Object  -Unique
 
 $summaryText = "# Summary`n`n"
+$currentPath = Get-Location | Select-Object -ExpandProperty Path
 foreach ($directory in $directories)
 {
     Write-Host "Processing folder : $directory" -f Cyan
@@ -11,7 +13,7 @@ foreach ($directory in $directories)
     foreach ($file in $dirFiles)
     {
         $title = Get-Content -Path $file.FullName | Select-String '# *'| Select-Object -first 1
-        $summaryText += "`t* [$($title -replace '# ', '')]($($file.FullName -replace '/Users/mcorr/Repos/til','.'))`n"
+        $summaryText += "`t* [$($title -replace '# ', '')]($($file.FullName -replace $currentPath,'.'))`n"
     }
 }
 $summaryText += "`n---`n"
