@@ -11,7 +11,7 @@ foreach ($directory in $directories)
     foreach ($file in $dirFiles)
     {
         $title = Get-Content -Path $file.FullName | Select-String '# *'| Select-Object -first 1
-        $summaryText += "`t* [$($title -replace '# ', '')]($($file.FullName -replace '/Users/mattcorr/github/til','.'))`n"
+        $summaryText += "`t* [$($title -replace '# ', '')]($($file.FullName -replace '/Users/mcorr/Repos/til','.'))`n"
     }
 }
 $summaryText += "`n---`n"
