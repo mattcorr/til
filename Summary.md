@@ -46,6 +46,8 @@
 	* [Working with Service Fabric stateless WebAPI services](./servicefabric/Working-with-stateless-webapi-code.md)
 * soapui
 	* [How to configure SoapUI for WCF-WSHttp messages](./soapui/how-to-send-towcf-wshttp.md)
+* sql
+	* [Get row count for all tables in database](./sql/get-row-count-for-all-tables.md)
 * vscode
 	* [Configure settings to auto format PowerShell code](./vscode/powershell-settings.md)
 
