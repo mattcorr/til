@@ -16,6 +16,8 @@
 	* [Git command reference](./git/useful-git-reference.md)
 * iis
 	* [How to re-create IIS Virtual Directories](./iis/recreate-virtual-dirs.md)
+* jenkins
+	* [How to accept script changes](./jenkins/accept-script-changes.md)
 * Jira
 	* [Formatting Jira comments with markdown like syntax](./Jira/formating-content.md)
 * nuget

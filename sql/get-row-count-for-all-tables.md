@@ -10,3 +10,5 @@ AND t.type_desc = 'USER_TABLE'
 AND t.name not like '%dss%'
 AND s.index_id IN (0,1)
 ```
+
+
