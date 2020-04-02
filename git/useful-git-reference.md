@@ -6,6 +6,7 @@ There are some useful commands to try and memorise!
 
 ## Commands
 
+### Configuration related
 Get the location of the config files used for all the settings in git
 ```
 git config --list --show-origin
@@ -31,6 +32,7 @@ A sample of the above:
 git config --global http.https://dev.azure.com.proxy "http://mattcorr:password@10.64.2.217:8080"
 ```
 
+### Undoing commits
 Undo a commit to a local branch. Say you accidently push files to your local master instead of pushing to a branch for a PR, use this to undo the change:
 ```
 git reset --soft HEAD~1
