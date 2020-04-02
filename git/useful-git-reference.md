@@ -30,3 +30,14 @@ A sample of the above:
 ```
 git config --global http.https://dev.azure.com.proxy "http://mattcorr:password@10.64.2.217:8080"
 ```
+
+Undo a commit to a local branch. Say you accidently push files to your local master instead of pushing to a branch for a PR, use this to undo the change:
+```
+git reset --soft HEAD~1
+```
+This will undo the commit AND leave the changed files still changed so you can push them to the correct branch.
+But if you want to blow away the changes and revert to the previous commit just use:
+ ```
+git reset --hard HEAD~1
+```
+But be really sure you want to do it as there is no undo.
