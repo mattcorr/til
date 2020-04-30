@@ -32,6 +32,12 @@ A sample of the above:
 git config --global http.https://dev.azure.com.proxy "http://mattcorr:password@10.64.2.217:8080"
 ```
 
+### Submodule related.
+Generally speaking, avoid submodules and use nuget packages instead. But if you have to deal with them, when you pull a full repo, it is likely you will need to update all the submodules as well. This can be done with running from the repo root:
+```
+git submodule foreach git pull origin master
+```
+
 ### Undoing commits
 Undo a commit to a local branch. Say you accidently push files to your local master instead of pushing to a branch for a PR, use this to undo the change:
 ```
