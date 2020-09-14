@@ -30,6 +30,7 @@
 	* [Check if an AD account is locked](./powershell/account-locked-status.md)
 	* [Check .NET Framework versions installed](./powershell/check-dotnet-version.md)
 	* [How to enable PS Remoting](./powershell/enable-psremoting.md)
+	* [How to remove special chars in JSON file format](./powershell/escape-json-in-file-format.md)
 	* [How to check the system up time](./powershell/get-system-uptime.md)
 	* [How to install PowerShell core on MacOS](./powershell/how-to-install-powershell-on-macos.md)
 	* [How to install BizTalk roles and features via PowerShell](./powershell/install-biztalk-rolesfeatures.md)
