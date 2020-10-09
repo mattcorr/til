@@ -4,11 +4,11 @@ Install the latest version of the **Microsoft Service Fabric SDK and Tools** on 
 
 This will include the ServiceFabric PowerShell module.
 
-There is [detailed help](https://docs.microsoft.com/en-us/powershell/servicefabric/vlatest/servicefabric) about the module's commandlets available. 
+There is [detailed help](https://docs.microsoft.com/en-us/powershell/servicefabric/vlatest/servicefabric) about the module's commandlets available.
 
-In a nutshell you connect to the Service Fabric and then can run commands against it. Nice and easy :)
+In a nutshell you connect to the Service Fabric and then can run commands against it. Nice and easy :\)
 
-```powershell
+```text
 Connect-ServiceFabricCluster -ConnectionEndpoint "localhost:19000"
 
 Get-ServiceFabricNode | Format-Table -Property NodeName, NodeStatus, HealthState, NodeUpTime, CodeVersion
@@ -16,7 +16,7 @@ Get-ServiceFabricNode | Format-Table -Property NodeName, NodeStatus, HealthState
 
 will return something like:
 
-```
+```text
 NodeName NodeStatus HealthState NodeUpTime CodeVersion 
 -------- ---------- ----------- ---------- ----------- 
 _Node_4          Up          Ok 00:53:55   5.4.164.9494

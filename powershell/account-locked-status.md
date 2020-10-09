@@ -2,7 +2,7 @@
 
 If you want to quickly see if an account is locked, use this:
 
-```powershell
+```text
 Get-ADUser <accountname> -Properties * | Select-Object LockedOut
 ```
 
@@ -12,6 +12,4 @@ There are other useful parameters on the Properties worth examining.
 
 * **passwordlastset** - when was the password last set?
 * **passwordneverexpires** - does the password expire sometime?
-
-
 

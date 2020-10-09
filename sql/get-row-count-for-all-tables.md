@@ -11,4 +11,3 @@ AND t.name not like '%dss%'
 AND s.index_id IN (0,1)
 ```
 
-

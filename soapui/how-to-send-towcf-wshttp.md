@@ -4,11 +4,11 @@
 
 Just have to remember to tick this option:
 
-![SOAP UI Screenshot](../images/2017/03/2017-03-03_14-45-16.png)
+![SOAP UI Screenshot](../.gitbook/assets/2017-03-03_14-45-16.png)
 
 Before you send your message otherwise you will end up with errors like:
 
-```xml
+```markup
 <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
    <s:Header>
       <a:Action s:mustUnderstand="1">http://www.w3.org/2005/08/addressing/soap/fault</a:Action>
@@ -28,3 +28,4 @@ Before you send your message otherwise you will end up with errors like:
    </s:Body>
 </s:Envelope>
 ```
+

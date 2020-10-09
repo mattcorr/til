@@ -6,5 +6,5 @@ For SDK updates, they recommend to run the Web Platform Installer and for Runtim
 
 But what if our local dev and test environments are not connected to the Internet?
 
-If you look at the release notes DOCX file that is part of each release ([sample](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/24/release-of-sdk-2-6-210-and-runtime-5-6-210-refresh-for-windows-and-sdk-2-7-and-runtime-5-7-preview/)), they include links to the direct packages you need to install.
+If you look at the release notes DOCX file that is part of each release \([sample](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/24/release-of-sdk-2-6-210-and-runtime-5-6-210-refresh-for-windows-and-sdk-2-7-and-runtime-5-7-preview/)\), they include links to the direct packages you need to install.
 

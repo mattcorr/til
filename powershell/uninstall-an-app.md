@@ -1,16 +1,14 @@
-
 # How to uninstall a BizTalk application
 
-It can be handy as part of a BizTalk application deployment to remove an old or newer version there.
-This assumes you use the [BTDF](https://biztalkdeployment.codeplex.com/) for deploying an application.
+It can be handy as part of a BizTalk application deployment to remove an old or newer version there. This assumes you use the [BTDF](https://biztalkdeployment.codeplex.com/) for deploying an application.
 
-When you use BTDF, it installs the windows menu, a selectable option to un-deploy the application. 
+When you use BTDF, it installs the windows menu, a selectable option to un-deploy the application.
 
 The script below simulates stopping the BizTalk application and then un-deploying the application from the server.
 
 **Note:** Need to run all these in 32 bit PowerShell. _Why??_ This is due to BizTalk PowerShell requiring 32 bit to access its features correctly.
 
-Because of this requirement, we need to wrap the script in a code block. More info about how to do that [here](./running-32bit-within-64bit.html).
+Because of this requirement, we need to wrap the script in a code block. More info about how to do that [here](https://github.com/mattcorr/today-i-learned/tree/1f8367172eda6e0300cebcd6b150327ec822de85/powershell/running-32bit-within-64bit.html).
 
 The following assumptions are made in the script below:
 
@@ -18,8 +16,7 @@ The following assumptions are made in the script below:
 * BizTalk 2016 is being used.
 * BizTalk is installed on either C or D drive.
 
-
-```powershell
+```text
 param (
     [string] $ApplicationName,
     [string] $BiztalkSQlServer = ".",
@@ -45,16 +42,16 @@ $existingApps =  Get-ItemProperty HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\C
 
 if ($existingApps -ne $null)
 {
-	Write-Host "Have found $ApplicationName already installed."
-	foreach ($app in $existingApps)
-	{
-		Write-Host "Checking existing: '$($app.DisplayName)'. Version: $($app.DisplayVersion)..."
-		[System.Version]$version = $app.DisplayVersion
-		if ($version -gt $compareVersion)
-		{
-	        Write-Host "Newer version of '$ApplicationName' have been detected. Attempting to undeploy."
-            
-		    Write-Host "Loading BizTalk PowerShell..."
+    Write-Host "Have found $ApplicationName already installed."
+    foreach ($app in $existingApps)
+    {
+        Write-Host "Checking existing: '$($app.DisplayName)'. Version: $($app.DisplayVersion)..."
+        [System.Version]$version = $app.DisplayVersion
+        if ($version -gt $compareVersion)
+        {
+            Write-Host "Newer version of '$ApplicationName' have been detected. Attempting to undeploy."
+
+            Write-Host "Loading BizTalk PowerShell..."
             # Load Biztalk PowerShell
             if ((Get-Module -Name "BizTalkFactory.PowerShell.Extensions") -eq $null) 
             {
@@ -75,7 +72,7 @@ if ($existingApps -ne $null)
             # Ensure no drive exists already
             If (Test-Path BizTalk:)
             {
-	            Remove-PSDrive -Name "BizTalk"
+                Remove-PSDrive -Name "BizTalk"
             }
 
             # create the PS-Drive, get the application names and remove the ps drive
@@ -118,7 +115,7 @@ if ($existingApps -ne $null)
 
             Write-Host "For undeployment running: $msBuildPath $undeployArgs"
             & $msBuildPath $undeployArgs
-            
+
             # uninstall the application from the control panel
             $uninstallString = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object DisplayName -eq "$ApplicationName for BizTalk" | Select-Object -ExpandProperty UninstallString
             if ($uninstallString -eq $null)
@@ -130,16 +127,16 @@ if ($existingApps -ne $null)
 
             & "msiexec.exe" $args
             Write-Host "Uninstall of $ApplicationName complete."
-		}
-		else
-		{
-		    Write-Host "No later versions of '$ApplicationName' have been detected. Continuing the installation."
-		}
-	}
+        }
+        else
+        {
+            Write-Host "No later versions of '$ApplicationName' have been detected. Continuing the installation."
+        }
+    }
 }
 else
 {
-	Write-Host "No previous installations of '$ApplicationName' have been detected. Continuing the installation."
+    Write-Host "No previous installations of '$ApplicationName' have been detected. Continuing the installation."
 }
 
 }

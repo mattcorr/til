@@ -9,7 +9,7 @@ Often when I am creating custom data, I usually:
 
 You can merge this with something like:
 
-```powershell
+```text
  $drives = [System.IO.DriveInfo]::GetDrives() |
     Where-Object {$_.TotalSize} |
     Select-Object   @{Name='Name';     Expr={$_.Name}},
@@ -27,3 +27,4 @@ $drives | ConvertTo-Json -Compress
 Saves time and makes the code faster and more readable!
 
 Credit for the above code is [here](https://xainey.github.io/2017/powershell-electron-demo/).
+
