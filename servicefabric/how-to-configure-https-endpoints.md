@@ -2,13 +2,13 @@
 
 There are three areas that need to be modified.
 
-_(this assumes you use the standard service template code)_
+_\(this assumes you use the standard service template code\)_
 
 ## Service Manifest
 
 Define the `Protocol` to be **https**. You also might want to change the port as well. I have set it to the security default of **443**.
 
-```xml
+```markup
   <Resources>
     <Endpoints>
       <Endpoint Protocol="https" Name="ServiceEndpoint" Type="Input" Port="443" />
@@ -21,14 +21,13 @@ Define the `Protocol` to be **https**. You also might want to change the port as
 
 In the ApplicationManifest xml, the certificate needs to be referenced in the `<Certificates>` section at the bottom.
 
-**IMPORTANT NOTE:** 
-When replacing the cert thumbnail for the `X509FindValue` take extra care when copying it from the MMC Certificates properties window. You will most likely include a hidden character at the start of the thumbnail.
+**IMPORTANT NOTE:** When replacing the cert thumbnail for the `X509FindValue` take extra care when copying it from the MMC Certificates properties window. You will most likely include a hidden character at the start of the thumbnail.
 
-Next ensure in the `<Policies>` section, you mention which certificate is linked to which service. 
+Next ensure in the `<Policies>` section, you mention which certificate is linked to which service.
 
 Ensure the `EndPointRef` matches up with the Endpoint name in the ServiceManifest.xml
 
-```xml
+```markup
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="TestServicePkg" ServiceManifestVersion="1.0.0" />
     <ConfigOverrides />
@@ -49,7 +48,7 @@ Ensure the `EndPointRef` matches up with the Endpoint name in the ServiceManifes
 </ApplicationManifest>
 ```
 
-So far, this matches us with the instructions Microsoft have documented [here](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-service-manifest-resources), but it seems one additional step is required.. 
+So far, this matches us with the instructions Microsoft have documented [here](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-service-manifest-resources), but it seems one additional step is required..
 
 ## Update OwinCommunicationListener.cs
 
@@ -67,7 +66,7 @@ public Task<string> OpenAsync(CancellationToken cancellationToken)
     if (this.serviceContext is StatefulServiceContext)
     {
         StatefulServiceContext statefulServiceContext = this.serviceContext as StatefulServiceContext;
-        
+
         this.listeningAddress = string.Format(
             CultureInfo.InvariantCulture,
             "{0}://+:{1}/{2}{3}/{4}/{5}", // <- UPDATED
@@ -82,7 +81,7 @@ public Task<string> OpenAsync(CancellationToken cancellationToken)
     }
     else if (this.serviceContext is StatelessServiceContext)
     {
-        
+
         this.listeningAddress = string.Format(
             CultureInfo.InvariantCulture,
             "{0}://+:{1}/{2}",      // <- UPDATED
@@ -99,3 +98,4 @@ public Task<string> OpenAsync(CancellationToken cancellationToken)
 ```
 
 Now when your service is deployed, the https endpoint _should_ work as expected.
+

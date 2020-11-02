@@ -4,7 +4,7 @@ Sometimes at client sites, we need to use PowerShell scripts to invoke REST APIs
 
 `Invoke-RestMethod` has the `-Proxy` and `ProxyCredentials` parameters, but you should use this instead:
 
-```powershell
+```text
 $proxyUri = [System.Uri]"http://10.xx.xx.xxx:8080"
 $proxy = New-Object System.Net.WebProxy($proxyUri)
 $proxy.Credentials = New-Object System.Net.NetworkCredential("accountname", "password")
@@ -16,3 +16,4 @@ $result = Invoke-RestMethod  -Uri $urlToCall -ContentType "application/json" -He
 ```
 
 This should give you the results you need!
+

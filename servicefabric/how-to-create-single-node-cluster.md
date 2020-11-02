@@ -1,4 +1,4 @@
-# How to create a single node cluster (offline)
+# How to create a single node cluster \(offline\)
 
 To create a single node Service Fabric cluster you would follow [this page](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-creation-for-windows-server) from the Service Fabric documentation.
 
@@ -10,7 +10,7 @@ _This is documented, but it is easy to miss!_
 
 The location in the cluster jcon config is in the `Properties` section. I would put under the `reliabilityLevel` so it is clearly visible.
 
-```json
+```javascript
 "properties": {
     "reliabilityLevel": "Bronze",
     "enableTelemetry": false,
@@ -35,7 +35,7 @@ Always run the `TestConfiguration.ps1` script before you create the cluster. Thi
 
 Expected output should be something like:
 
-```
+```text
 PS C:\temp\Service-Fabric-Installs\SF-Install-5.5.216.0> .\TestConfiguration.ps1 -ClusterConfigFilePath .\ClusterConfig.Demo.json -FabricRuntimePackagePath ..\MicrosoftAzureServiceFabric.5.5.216.0.cab
 Trace folder already exists. Traces will be written to existing trace folder: C:\temp\Service-Fabric-Installs\SF-Install-5.5.216.0\DeploymentTraces
 Running Best Practices Analyzer...
