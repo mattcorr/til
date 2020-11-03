@@ -10,7 +10,7 @@ Running the `Get-WindowsFeature` command will show all the roles and features th
 
 This sample script below used for installing BizTalk Roles and Features also takes into account if the Windows Server source folder is not in the default location. This can sometimes be the case on locked down corporate networks.
 
-```text
+```powershell
 param (
   [string] $sourceFolder = ""
 )

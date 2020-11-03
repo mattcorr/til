@@ -2,7 +2,7 @@
 
 If you want to quickly and easily see how long a server has been running for since its last reboot then use this function:
 
-```text
+```powershell
 function Get-SystemUptime 
 {
    $os = Get-WmiObject win32_operatingsystem
