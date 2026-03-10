@@ -1,20 +1,16 @@
-# README
+# TIL
 
-## What is TIL?
+This repo contains the source for Matt Corr's "Today I Learned" site, now built with MkDocs and the Material theme.
 
-This site is the personal **"Today I Learned"** site for Matt Corr.
+## Local preview
 
-Do you ever pick up snippets of info or run into cool workarounds every day and then promptly forget them not long after?
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+mkdocs serve
+```
 
-This site is for Matt to try and recall these snippets of info and help others in the process. This would be for things larger than a tweet and smaller than a blog post.
+## Deployment
 
-## So what sort of content will be here?
-
-My basic rule is this: If its a small snippet with just some text and some code, I'll put it here. If it requires a bit of effort to document, it will more likely be on my [main blog](https://www.intrepidintegration.com).
-
-There is only ever one category for TIL snippets. Keeps things simple and easy to digest.
-
-## Where did you get this idea from?
-
-I got this idea from [Leon Bambrick](http://www.secretgeek.net/) who has his own [TIL site here](https://til.secretgeek.net/). I saw it and thought what a great idea!
-
+GitHub Actions builds and deploys the static site to GitHub Pages from `main`.

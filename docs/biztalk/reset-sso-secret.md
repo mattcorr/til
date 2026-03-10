@@ -6,7 +6,7 @@ If you are getting many errors in the EventLog related to the SSO like this. _\(
 Cannot perform encryption or decryption because the secret is not available from the master secret server.
 ```
 
-![Screenshot of EventLog entry](../.gitbook/assets/2018-02-21_14-33-27.png)
+![Screenshot of EventLog entry](../assets/images/2018-02-21_14-33-27.png)
 
 Then you need to reset your SSO master secret.
 
@@ -33,4 +33,3 @@ The operation completed successfully.
 If you can't find any `*.bak` file in the folder or you don't recall what your password is, then unfortunately you have no choice but to un-configure and reconfigure BizTalk.
 
 So some tips are: **ALWAYS** backup the secret and make the Password Reminder **REALLY** obvious.
-
