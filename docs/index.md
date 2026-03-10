@@ -1,0 +1,17 @@
+# What is TIL?
+
+This site is the personal **"Today I Learned"** site for Matt Corr.
+
+Do you ever pick up snippets of info or run into cool workarounds every day and then promptly forget them not long after?
+
+This site is for Matt to try and recall these snippets and help others in the process. The aim is content that is larger than a tweet and smaller than a blog post.
+
+## So what sort of content will be here?
+
+My basic rule is this: if it is a small snippet with just some text and some code, I'll put it here. If it requires a bit of effort to document, it will more likely be on my [main blog](https://www.intrepidintegration.com).
+
+There is only ever one category for TIL snippets. Keeps things simple and easy to digest.
+
+## Where did you get this idea from?
+
+I got this idea from [Leon Bambrick](http://www.secretgeek.net/) who has his own [TIL site here](https://til.secretgeek.net/). I saw it and thought what a great idea.

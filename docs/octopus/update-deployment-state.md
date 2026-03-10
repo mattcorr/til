@@ -29,5 +29,4 @@ Invoke-RestMethod -Method Post -Uri $octopusUri  -Body $body -Headers $header
 
 This will update the status. Example shown below:
 
-![Sample Octopus Projects](../.gitbook/assets/2018-02-24_08-59-29.png)
-
+![Sample Octopus Projects](../assets/images/2018-02-24_08-59-29.png)

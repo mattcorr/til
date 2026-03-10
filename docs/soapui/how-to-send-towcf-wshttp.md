@@ -4,7 +4,7 @@
 
 Just have to remember to tick this option:
 
-![SOAP UI Screenshot](../.gitbook/assets/2017-03-03_14-45-16.png)
+![SOAP UI Screenshot](../assets/images/2017-03-03_14-45-16.png)
 
 Before you send your message otherwise you will end up with errors like:
 
@@ -28,4 +28,3 @@ Before you send your message otherwise you will end up with errors like:
    </s:Body>
 </s:Envelope>
 ```
-
