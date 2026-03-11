@@ -12,7 +12,7 @@ You are working away on a repo and commit your changes, you then push to origin 
 
 From the command line:
 
-```text
+```console
 git reset HEAD~1
 ```
 

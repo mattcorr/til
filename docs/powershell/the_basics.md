@@ -8,7 +8,7 @@ description: 'Basic PowerShell examples and syntax notes for getting started.'
 
 This is a sample page with basis info about PowerShell
 
-```text
+```powershell
 Write-Host "this is  test"
 ```
 

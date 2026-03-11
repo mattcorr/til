@@ -18,7 +18,7 @@ This usually means you have missed some commits and need to get them in sync fir
 
 you will need to open git to the folder where the repo is hosted and enter in:
 
-```text
+```console
 git pull origin master
 ```
 

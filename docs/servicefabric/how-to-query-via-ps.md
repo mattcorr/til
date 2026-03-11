@@ -12,7 +12,7 @@ There is [detailed help](https://docs.microsoft.com/en-us/powershell/servicefabr
 
 In a nutshell you connect to the Service Fabric and then can run commands against it. Nice and easy :\)
 
-```text
+```powershell
 Connect-ServiceFabricCluster -ConnectionEndpoint "localhost:19000"
 
 Get-ServiceFabricNode | Format-Table -Property NodeName, NodeStatus, HealthState, NodeUpTime, CodeVersion

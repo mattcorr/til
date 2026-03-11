@@ -16,7 +16,7 @@ If you use this in your script, if it is triggered it makes your logs look much 
 
 in your script have something like:
 
-```text
+```powershell
 if ($errorOccured)
 {
     Fail-Step "There was error with the processing and the details are.... "

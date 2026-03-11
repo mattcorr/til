@@ -20,7 +20,7 @@ The following assumptions are made in the script below:
 * BizTalk 2016 is being used.
 * BizTalk is installed on either C or D drive.
 
-```text
+```powershell
 param (
     [string] $ApplicationName,
     [string] $BiztalkSQlServer = ".",

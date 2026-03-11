@@ -8,7 +8,7 @@ It can be useful to have this enabled so you can remotely query server settings 
 
 To enable PowerShell Remoting enter in:
 
-```text
+```powershell
 Enable-PSRemoting -Force
 ```
 

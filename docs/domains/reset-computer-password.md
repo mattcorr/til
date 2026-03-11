@@ -12,7 +12,7 @@ This can occur when you have snapshots on local VMs, if you go back and forth a 
 
 If you get the above error, log into the VM in question with an admin account \(local is fine\) and run the following'
 
-```bash
+```powershell
 $creds = Get-Credential
 Reset-ComputerMachinePassword -Server <domain controller> -Credentials $creds
 ```

@@ -12,7 +12,7 @@ This is covered in details in this [nuget bug](https://github.com/NuGet/Home/iss
 
 So, if you want to get out through the proxy easily, configure your nuget with the following:
 
-```text
+```console
 nuget.exe config -set http_proxy="http://proxy.server.com:8888"
 nuget.exe config -set http_proxy.user=Username
 nuget.exe config -set http_proxy.Password=Password
@@ -22,7 +22,7 @@ Do not store these in a separate config file! Make sure they go to the default!
 
 In other words, **don't do this**:
 
-```text
+```console
 nuget.exe config -set http_proxy="http://proxy.server.com:8888" -ConfigFile=D:\nuget\nuget.config
 ```
 

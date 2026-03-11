@@ -8,7 +8,7 @@ Sometimes there are cases when you need to run some powershell code in 32 bit mo
 
 This is a way to do that within a single script with some parameters:
 
-```text
+```powershell
 param (
     [string] $value1,
     [int] $value2

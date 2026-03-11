@@ -13,7 +13,7 @@ Often when I am creating custom data, I usually:
 
 You can merge this with something like:
 
-```text
+```powershell
  $drives = [System.IO.DriveInfo]::GetDrives() |
     Where-Object {$_.TotalSize} |
     Select-Object   @{Name='Name';     Expr={$_.Name}},
