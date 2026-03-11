@@ -2,7 +2,7 @@
 description: 'Find standalone Service Fabric package downloads and release announcements.'
 ---
 
-# Where to find stand alone packages for Service Fabric
+# Where to find standalone packages for Service Fabric
 
 When new Service Fabric packages are released they are announced on the [Service Fabric blog](https://blogs.msdn.microsoft.com/azureservicefabric/).
 

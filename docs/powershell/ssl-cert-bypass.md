@@ -4,7 +4,8 @@ description: 'Temporarily bypass SSL certificate validation for PowerShell web r
 
 # Set Powershell to skip SSL certificate checks
 
-## NOTE: This is NOT a recommended practice! You should have valid certificates and CA Servers!
+!!! danger 
+    This is NOT a recommended practice! You should have valid certificates and CA Servers!
 
 If you are trying to query a web site and you have invalid SSL certificates, Powershell is by default very strict on what it accepts. You will often end up with errors like:
 

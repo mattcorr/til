@@ -8,7 +8,7 @@ Install the latest version of the **Microsoft Service Fabric SDK and Tools** on 
 
 This will include the ServiceFabric PowerShell module.
 
-There is [detailed help](https://docs.microsoft.com/en-us/powershell/servicefabric/vlatest/servicefabric) about the module's commandlets available.
+There is [detailed help](https://docs.microsoft.com/en-us/powershell/servicefabric/vlatest/servicefabric) about the module's cmdlets available.
 
 In a nutshell you connect to the Service Fabric and then can run commands against it. Nice and easy :\)
 

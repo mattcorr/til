@@ -25,7 +25,8 @@ Define the `Protocol` to be **https**. You also might want to change the port as
 
 In the ApplicationManifest xml, the certificate needs to be referenced in the `<Certificates>` section at the bottom.
 
-**IMPORTANT NOTE:** When replacing the cert thumbnail for the `X509FindValue` take extra care when copying it from the MMC Certificates properties window. You will most likely include a hidden character at the start of the thumbnail.
+!!! note "Important Note!"
+    When replacing the cert thumbnail for the `X509FindValue` take extra care when copying it from the MMC Certificates properties window. You will most likely include a hidden character at the start of the thumbnail.
 
 Next ensure in the `<Policies>` section, you mention which certificate is linked to which service.
 

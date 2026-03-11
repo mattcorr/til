@@ -13,7 +13,7 @@ description: 'PowerShell notes covering automation, admin tasks, and useful comm
 - [How to install PowerShell core on MacOS](how-to-install-powershell-on-macos.md): Install, upgrade, reinstall, or remove PowerShell on macOS with Homebrew.
 - [How to install BizTalk roles and features via PowerShell](install-biztalk-rolesfeatures.md): Install the Windows roles and features required for BizTalk Server.
 - [How to query the Internet behind a NTLM Proxy on a corporate network](net-access-behind-a-firewall.md): Send PowerShell web requests through an NTLM-authenticated corporate proxy.
-- [How to run powershell in 32 bit mode within 64 bit](running-32bit-within-64bit.md): Launch 32-bit PowerShell from a 64-bit session for compatibility-sensitive scripts.
+- [How to run PowerShell in 32 bit mode within 64 bit](running-32bit-within-64bit.md): Launch 32-bit PowerShell from a 64-bit session for compatibility-sensitive scripts.
 - [Set Powershell to skip SSL certificate checks](ssl-cert-bypass.md): Temporarily bypass SSL certificate validation for PowerShell web requests.
 - [PowerShell basics](the_basics.md): Basic PowerShell examples and syntax notes for getting started.
 - [How to uninstall a BizTalk application](uninstall-an-app.md): Uninstall a BizTalk application with PowerShell, including 32-bit session handling.

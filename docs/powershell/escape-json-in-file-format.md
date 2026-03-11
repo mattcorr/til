@@ -36,6 +36,7 @@ to
     }
 ```
 
-**Note:** you still will need to escape some chars like `"` and `\` but these are more managable.
+!!! note 
+    You still will need to escape some chars like `"` and `\` but these are more managable.
 
 * [Reference Source](https://stackoverflow.com/questions/47779157/convertto-json-and-convertfrom-jason-with-special-characters/47779605#47779605)

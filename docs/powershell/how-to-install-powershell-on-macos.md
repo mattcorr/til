@@ -4,13 +4,14 @@ description: 'Install, upgrade, reinstall, or remove PowerShell on macOS with Ho
 
 # How to install PowerShell core on MacOS
 
-NOTE: Original instructions are [here](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md), I have just duplicated here for easy access.
+!!! note
+    Original instructions are [here](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md), I have just duplicated here for easy access.
 
 ## How to install
 
 Do the following from the macOS console:
 
-Install [Homebrew](http://brew.sh/). If you dont already have it, run this:
+Install [Homebrew](http://brew.sh/). If you don't already have it, run this:
 
 ```console
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

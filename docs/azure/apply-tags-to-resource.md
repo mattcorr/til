@@ -6,7 +6,7 @@ description: 'Apply consistent tags across Azure resource groups and the resourc
 
 Tags are a useful way to keep track of who owns what resource in a company wide Azure subscription.
 
-You can enforce the creation of tags via the **Apply tag and its default value** policy you can assign to all or part of your subscription. But this only works for future resource created. What if you already have a lot there?
+You can enforce the creation of tags via the **Apply tag and its default value** policy you can assign to all or part of your subscription. But this only works for future resources created. What if you already have many pre-existing defined?
 
 ## Set tags at the resource groups
 

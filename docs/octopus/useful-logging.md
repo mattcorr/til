@@ -6,9 +6,9 @@ description: 'Improve Octopus script logging so real errors stand out in deploym
 
 ## Issue
 
-When you have scripted steps in Octopus, you can usually use `Write-Error` to sent out an error message and stop the deployment. But it looks a bit ugly and you still have to dive in to the logs to find the real error message.
+When you have scripted steps in Octopus, you can usually use `Write-Error` to send out an error message and stop the deployment. But it looks a bit ugly and you still have to dive in to the logs to find the real error message.
 
-It is best to use the built n Octopus function `Fail-Step <string>`
+It is best to use the built in Octopus function `Fail-Step <string>`
 
 If you use this in your script, if it is triggered it makes your logs look much more readable.
 

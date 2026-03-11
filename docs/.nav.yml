@@ -1,0 +1,18 @@
+nav:
+  - index.md
+  - azure
+  - azuredevops
+  - biztalk
+  - domains
+  - dotnet
+  - git
+  - iis
+  - jenkins
+  - jira
+  - nuget
+  - octopus
+  - powershell
+  - servicefabric
+  - soapui
+  - sql
+  - vscode

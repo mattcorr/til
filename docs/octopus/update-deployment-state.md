@@ -6,7 +6,7 @@ description: 'Change the status of an Octopus deployment after it has finished.'
 
 ## The issue
 
-There is now the ability to change the state of a deployment after its happened.
+We now have the ability to change the state of a deployment after it has occurred.
 
 This can be useful if there are scenarios where external apps can remove deployments triggered from Octopus, and you want a way to let Octopus know that an app is no longer there.
 

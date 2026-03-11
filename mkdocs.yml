@@ -22,6 +22,7 @@ theme:
 
 plugins:
   - search
+  - awesome-nav
 
 markdown_extensions:
   - admonition
@@ -40,77 +41,3 @@ markdown_extensions:
 
 not_in_nav: |
   Summary.md
-
-nav:
-  - Home: index.md
-  - Azure:
-      - Overview: azure/README.md
-      - Apply Tags to Resource: azure/apply-tags-to-resource.md
-  - Azure DevOps:
-      - Overview: azuredevops/README.md
-      - Build Unable To Start: azuredevops/build-unable-tostart.md
-  - BizTalk:
-      - Overview: biztalk/README.md
-      - Create Simple Types In XSD: biztalk/create-simple-types-in-xsd.md
-      - Reset SSO Secret: biztalk/reset-sso-secret.md
-  - Domains:
-      - Overview: domains/README.md
-      - Reset Computer Password: domains/reset-computer-password.md
-  - .NET:
-      - Overview: dotnet/README.md
-      - .NET Versions: dotnet/dotnetversions.md
-  - Git:
-      - Overview: git/README.md
-      - Move Changes Branch: git/move-changes-branch.md
-      - Resync Correctly: git/resync-correctly.md
-      - Useful Git Reference: git/useful-git-reference.md
-  - IIS:
-      - Overview: iis/README.md
-      - Recreate Virtual Dirs: iis/recreate-virtual-dirs.md
-  - Jenkins:
-      - Overview: jenkins/README.md
-      - Accept Script Changes: jenkins/accept-script-changes.md
-  - Jira:
-      - Overview: jira/README.md
-      - Formatting Content: jira/formating-content.md
-  - NuGet:
-      - Overview: nuget/README.md
-      - NuGet And Proxies: nuget/nuget-and-proxies.md
-  - Octopus:
-      - Overview: octopus/README.md
-      - Octopus Info: octopus/octopus-info.md
-      - Update Deployment State: octopus/update-deployment-state.md
-      - Useful Logging: octopus/useful-logging.md
-  - PowerShell:
-      - Overview: powershell/README.md
-      - Account Locked Status: powershell/account-locked-status.md
-      - Check .NET Version: powershell/check-dotnet-version.md
-      - Custom Select Params: powershell/custom-select-params.md
-      - Enable PSRemoting: powershell/enable-psremoting.md
-      - Escape JSON In File Format: powershell/escape-json-in-file-format.md
-      - Get System Uptime: powershell/get-system-uptime.md
-      - How To Install PowerShell On macOS: powershell/how-to-install-powershell-on-macos.md
-      - Install BizTalk Roles Features: powershell/install-biztalk-rolesfeatures.md
-      - Net Access Behind A Firewall: powershell/net-access-behind-a-firewall.md
-      - Running 32-Bit Within 64-Bit: powershell/running-32bit-within-64bit.md
-      - SSL Cert Bypass: powershell/ssl-cert-bypass.md
-      - The Basics: powershell/the_basics.md
-      - Uninstall An App: powershell/uninstall-an-app.md
-      - Use Select-Object To Customise Array: powershell/use-select-object-to-customise-array.md
-  - Service Fabric:
-      - Overview: servicefabric/README.md
-      - Configure HTTPS Endpoints: servicefabric/how-to-configure-https-endpoints.md
-      - Create Single Node Cluster: servicefabric/how-to-create-single-node-cluster.md
-      - Query Via PowerShell: servicefabric/how-to-query-via-ps.md
-      - Upgrade Certs For Cluster: servicefabric/how-to-upgrade-certs-for-cluster.md
-      - Stand-Alone Packages: servicefabric/where-to-find-stand-alone-packages.md
-      - Stateless Web API Code: servicefabric/working-with-stateless-webapi-code.md
-  - SoapUI:
-      - Overview: soapui/README.md
-      - Send To WCF WSHttp: soapui/how-to-send-towcf-wshttp.md
-  - SQL:
-      - Overview: sql/README.md
-      - Row Count For All Tables: sql/get-row-count-for-all-tables.md
-  - VS Code:
-      - Overview: vscode/README.md
-      - PowerShell Settings: vscode/powershell-settings.md

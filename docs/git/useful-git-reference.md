@@ -53,7 +53,7 @@ git submodule foreach git pull origin master
 
 ### Undoing commits
 
-Undo a commit to a local branch. Say you accidently push files to your local master instead of pushing to a branch for a PR, use this to undo the change:
+Undo a commit to a local branch. Say you accidentally push files to your local master instead of pushing to a branch for a PR, use this to undo the change:
 
 ```console
 git reset --soft HEAD~1

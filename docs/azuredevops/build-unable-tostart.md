@@ -6,7 +6,7 @@ description: 'Fix Azure DevOps or TFS builds that fail during the initialise job
 
 ## Issue
 
-If you have a well defined build process, and yet your build is failing in the **Initalize Job** step with error messages like as shown below.
+If you have a well defined build process, and yet your build is failing in the **Initalize Job** step with error messages as shown below.
 
 Issues like this are really puzzling as builds that worked in the past are now no longer working and it seems like nothing has changed!?
 
