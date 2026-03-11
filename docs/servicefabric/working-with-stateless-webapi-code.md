@@ -6,7 +6,8 @@ description: 'Extend the generated Service Fabric stateless Web API template wit
 
 Most of the time you can use most of your generated templates and just define your custom controller class and the methods defined will work as expected.
 
-Note: Also define the objects that are used for the request and the response. I usually put these in a separate project called `<ServiceName>.Models`.
+!!! note
+    Also define the objects that are used for the request and the response. I usually put these in a separate project called `<ServiceName>.Models`.
 
 But if you want to ensure that your response does exactly what you want. _\(ie return a different HTTP status code\)_, you can overload with the following approach.
 

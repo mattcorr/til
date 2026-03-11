@@ -11,8 +11,6 @@ First you need to get the new certificate and add it to the Certificate store vi
 * local NETWORK SERVICE account
 * any Active directory user accounts or groups that your Service Fabric service will run as
 
-Once this i
-
-TODO : need to see what commands or actions need to happen after we install the certificate to get the cluster to pick up the new cert.
+**TODO:** need to see what commands or actions need to happen after we install the certificate to get the cluster to pick up the new cert.
 
 _We know rebooting the server will work, but does seem a bit drastic._

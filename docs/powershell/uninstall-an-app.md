@@ -10,7 +10,8 @@ When you use BTDF, it installs the windows menu, a selectable option to un-deplo
 
 The script below simulates stopping the BizTalk application and then un-deploying the application from the server.
 
-**Note:** Need to run all these in 32 bit PowerShell. _Why??_ This is due to BizTalk PowerShell requiring 32 bit to access its features correctly.
+!!! tip
+    Need to run all these in 32 bit PowerShell. _Why??_ This is due to BizTalk PowerShell requiring 32 bit to access its features correctly.
 
 Because of this requirement, we need to wrap the script in a code block. More info about how to do that [here](https://github.com/mattcorr/today-i-learned/tree/1f8367172eda6e0300cebcd6b150327ec822de85/powershell/running-32bit-within-64bit.html).
 

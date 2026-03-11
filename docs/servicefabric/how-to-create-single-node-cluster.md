@@ -14,7 +14,7 @@ _This is documented, but it is easy to miss!_
 
 The location in the cluster jcon config is in the `Properties` section. I would put under the `reliabilityLevel` so it is clearly visible.
 
-```javascript
+```json
 "properties": {
     "reliabilityLevel": "Bronze",
     "enableTelemetry": false,

@@ -6,7 +6,7 @@ description: 'Format Jira comments and tables using Jira''s markdown-like syntax
 
 ## Jira Tables
 
-In Jira, there is a basic editor, but you can choopse between visual or text editors.
+In Jira, there is a basic editor, but you can choose between visual or text editors.
 
 Tables are in the format of:
 
@@ -16,7 +16,7 @@ Tables are in the format of:
 |Content 1a| Content2a|
 ```
 
-This is handy to know so you can use PowerShell to query data and output it in this way to nbe easiluy pasted into a Jira comment field.
+This is handy to know so you can use PowerShell to query data and output it in this way to be easily pasted into a Jira comment field.
 
 ## Other useful bits
 

@@ -9,19 +9,19 @@ description: 'Resynchronise a branch with the latest remote changes before pushi
 If you get this error when syncing \(pushing\) to your remote origin:
 
 ```text
-git fatal: no upstream configured for branch 'master'
+git fatal: no upstream configured for branch 'main'
 ```
 
-This usually means you have missed some commits and need to get them in sync first before you can commit your new changes too.
+This usually means you’ve missed some commits and need to sync them first before you can commit your new changes as well.
 
 ## Actions
 
-you will need to open git to the folder where the repo is hosted and enter in:
+You will need to open git to the folder where the repo is hosted and enter in:
 
 ```console
-git pull origin master
+git pull origin main
 ```
 
-This will pull down any changes you have missed to the master branch _\(You can replace master with the branch you are working on\)_
+This will pull down any changes you have missed to the main branch _\(You can replace main with the branch you are working on\)_
 
 Then you can merge any diffs and commit to your local git, then a sync to your origin should work.

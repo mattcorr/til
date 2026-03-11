@@ -17,7 +17,8 @@ You can with:
 ```powershell
 $objects | Select-Object Id, Name, @{N='Name', E={$_.SubObject.SubProperty}}, Age, Address
 ```
-NOTE: **N** is a short form of Name and **E** is a short form of Expression.
+!!! note 
+    **N** is a short form of Name and **E** is a short form of Expression.
 
 You can do field manipulation too, like:
 

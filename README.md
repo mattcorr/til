@@ -5,11 +5,13 @@ This repo contains the source for Matt Corr's "Today I Learned" site, now built 
 ## Local preview
 
 ```console
-python3 -m venv .venv
+python3.10 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 mkdocs serve
 ```
+
+Use Python 3.10 or newer for local preview.
 
 ## Deployment
 

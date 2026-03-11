@@ -10,16 +10,17 @@ description: 'Repair a broken workstation trust relationship by resetting the co
 
 This can occur when you have snapshots on local VMs, if you go back and forth a bit, the domain controller might be confused about the identity of your VM.
 
-If you get the above error, log into the VM in question with an admin account \(local is fine\) and run the following'
+If you get the above error, log into the VM in question with an admin account \(local is fine\) and run the following:
 
 ```powershell
 $creds = Get-Credential
 Reset-ComputerMachinePassword -Server <domain controller> -Credentials $creds
 ```
 
-\_NOTE: You will just need to replace `<domain controller>` with the name of the domain server on your network.
+!!! note 
+    You will just need to replace `<domain controller>` with the name of the domain server on your network.
 
-When prompted for a account provide a domain admin account
+When prompted for an account provide a domain admin account.
 
 The `Reset-ComputerMachinePassword` command will do what it says.
 
