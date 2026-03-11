@@ -1,3 +1,7 @@
+---
+description: 'Approve pending Jenkins script changes so scripted jobs can run.'
+---
+
 # How to accept script changes
 
 If your Jenkins build job contains scripts, sometimes new deployments will have this error when you run them the first time:
@@ -19,4 +23,3 @@ To get around this, go to:
 **Jenkins -&gt; Manage Jenkins -&gt; In-process Script Approval**
 
 Scroll down to the scripts that needs to be approved and click on the Approve button as needed.
-

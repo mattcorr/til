@@ -1,3 +1,7 @@
+---
+description: 'Extend the generated Service Fabric stateless Web API template with custom controllers.'
+---
+
 # Working with Service Fabric stateless WebAPI services
 
 Most of the time you can use most of your generated templates and just define your custom controller class and the methods defined will work as expected.
@@ -71,4 +75,3 @@ public HttpResponseMessage Post([FromBody]HealthCheckPost value)
     return Request.CreateResponse(HttpStatusCode.OK, resp, Configuration.Formatters.XmlFormatter);
 }
 ```
-

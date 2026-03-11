@@ -1,3 +1,7 @@
+---
+description: 'Configure HTTPS endpoints and certificate bindings in a Service Fabric Web API service.'
+---
+
 # How to configure HTTPS endpoints in WebAPI services
 
 There are three areas that need to be modified.
@@ -98,4 +102,3 @@ public Task<string> OpenAsync(CancellationToken cancellationToken)
 ```
 
 Now when your service is deployed, the https endpoint _should_ work as expected.
-

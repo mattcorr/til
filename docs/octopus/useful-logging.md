@@ -1,3 +1,7 @@
+---
+description: 'Improve Octopus script logging so real errors stand out in deployment output.'
+---
+
 # Error logging in Octopus
 
 ## Issue
@@ -12,7 +16,7 @@ If you use this in your script, if it is triggered it makes your logs look much 
 
 in your script have something like:
 
-```text
+```powershell
 if ($errorOccured)
 {
     Fail-Step "There was error with the processing and the details are.... "
@@ -26,4 +30,3 @@ else
 ## Reference
 
 * [Octopus documentation about script error handling](https://octopus.com/docs/deploying-applications/custom-scripts#Customscripts-ErrorhandlinginPowerShellscripts)
-

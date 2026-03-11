@@ -1,3 +1,7 @@
+---
+description: 'Reset the BizTalk SSO secret and recover from related Event Log errors.'
+---
+
 # How to reset your SSO secret
 
 If you are getting many errors in the EventLog related to the SSO like this. _\(you will also have issues deploying or viewing the SSO data\)_:

@@ -1,3 +1,7 @@
+---
+description: 'Change the status of an Octopus deployment after it has finished.'
+---
+
 # How to update the deployment state in Octopus
 
 ## The issue
@@ -14,7 +18,7 @@ Get the Server-Task Id from the Deployment record
 
 then run the following _\(obviously alter it a bit based on your needs\)_ :
 
-```text
+```powershell
 $apikey = 'APIHFHFHFHFHFHFHFHFH'
 $header = @{"X-Octopus-ApiKey"=$apikey}
 

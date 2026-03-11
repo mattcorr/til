@@ -1,3 +1,7 @@
+---
+description: 'Connect to and query a Service Fabric cluster using PowerShell tools.'
+---
+
 # How to query Service Fabric via PowerShell
 
 Install the latest version of the **Microsoft Service Fabric SDK and Tools** on your local dev VM via the [Web Platform Tools](https://www.microsoft.com/web/downloads/platform.aspx).
@@ -8,7 +12,7 @@ There is [detailed help](https://docs.microsoft.com/en-us/powershell/servicefabr
 
 In a nutshell you connect to the Service Fabric and then can run commands against it. Nice and easy :\)
 
-```text
+```powershell
 Connect-ServiceFabricCluster -ConnectionEndpoint "localhost:19000"
 
 Get-ServiceFabricNode | Format-Table -Property NodeName, NodeStatus, HealthState, NodeUpTime, CodeVersion
@@ -25,4 +29,3 @@ _Node_2          Up          Ok 00:53:55   5.4.164.9494
 _Node_1          Up          Ok 00:53:55   5.4.164.9494
 _Node_0          Up          Ok 00:53:55   5.4.164.9494
 ```
-

@@ -1,3 +1,7 @@
+---
+description: 'Remove escape characters when writing JSON content to a file from PowerShell.'
+---
+
 # How to remove special chars in JSON file format
 
 Sometimes you want to write out an object in JSON format to a file. This is fine and what you would normally use [ConvertTo-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-7) for.
@@ -6,13 +10,13 @@ The only issue is the generated JSON will convert some chars like `<` to `\u003c
 
 To fix this, use this Regex snippet below to replace the escaped tokens in your output to make the file more readable.
 
-```text
+```powershell
   $data | ConvertTo-Json -Depth 10 | ForEach-Object { [Regex]::Replace($_, "\\u(?<Value>[a-zA-Z0-9]{4})", { param($m) ([char]([int]::Parse($m.Groups['Value'].Value, [System.Globalization.NumberStyles]::HexNumber))).ToString() } )} | Out-File $OutputFilename -Force
 ```
 
 This will turn your output from:
 
-```javascript
+```json
 "Key":  "WLSProtocol",
     "Values":  {
                     "Test":  "\u003chttpsTransport  maxReceivedMessageSize=\"1255360\"/\u003e",
@@ -23,7 +27,7 @@ This will turn your output from:
 
 to
 
-```javascript
+```json
     "Key": "WLSProtocol",
     "Values": {
         "Test": "<httpsTransport  maxReceivedMessageSize=\"1255360\"/>",
@@ -35,4 +39,3 @@ to
 **Note:** you still will need to escape some chars like `"` and `\` but these are more managable.
 
 * [Reference Source](https://stackoverflow.com/questions/47779157/convertto-json-and-convertfrom-jason-with-special-characters/47779605#47779605)
-

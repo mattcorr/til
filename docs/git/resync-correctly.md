@@ -1,3 +1,7 @@
+---
+description: 'Resynchronise a branch with the latest remote changes before pushing.'
+---
+
 # How to get the latest changes from git before you do a commit
 
 ## Issue
@@ -14,11 +18,10 @@ This usually means you have missed some commits and need to get them in sync fir
 
 you will need to open git to the folder where the repo is hosted and enter in:
 
-```text
+```console
 git pull origin master
 ```
 
 This will pull down any changes you have missed to the master branch _\(You can replace master with the branch you are working on\)_
 
 Then you can merge any diffs and commit to your local git, then a sync to your origin should work.
-

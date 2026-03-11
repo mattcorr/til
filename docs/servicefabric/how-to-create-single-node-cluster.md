@@ -1,3 +1,7 @@
+---
+description: 'Build a standalone single-node Service Fabric cluster for offline development or testing.'
+---
+
 # How to create a single node cluster \(offline\)
 
 To create a single node Service Fabric cluster you would follow [this page](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-creation-for-windows-server) from the Service Fabric documentation.
@@ -54,4 +58,3 @@ FabricInstallable          : True
 DataDrivesAvailable        : True
 Passed                     : True
 ```
-
