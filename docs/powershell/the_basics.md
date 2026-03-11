@@ -1,3 +1,7 @@
+---
+description: 'Basic PowerShell examples and syntax notes for getting started.'
+---
+
 # PowerShell basics
 
 ## The begining
@@ -9,4 +13,3 @@ Write-Host "this is  test"
 ```
 
 This is all you need to see for now :\)
-

@@ -1,3 +1,7 @@
+---
+description: 'Remove escape characters when writing JSON content to a file from PowerShell.'
+---
+
 # How to remove special chars in JSON file format
 
 Sometimes you want to write out an object in JSON format to a file. This is fine and what you would normally use [ConvertTo-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-7) for.
@@ -35,4 +39,3 @@ to
 **Note:** you still will need to escape some chars like `"` and `\` but these are more managable.
 
 * [Reference Source](https://stackoverflow.com/questions/47779157/convertto-json-and-convertfrom-jason-with-special-characters/47779605#47779605)
-

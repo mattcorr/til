@@ -1,3 +1,7 @@
+---
+description: 'Use Select-Object to create custom object arrays with calculated properties.'
+---
+
 # How to use a Select-Object to create your custom object array for you
 
 Often when I am creating custom data, I usually:
@@ -27,4 +31,3 @@ $drives | ConvertTo-Json -Compress
 Saves time and makes the code faster and more readable!
 
 Credit for the above code is [here](https://xainey.github.io/2017/powershell-electron-demo/).
-

@@ -1,3 +1,7 @@
+---
+description: 'Apply consistent tags across Azure resource groups and the resources they contain with PowerShell.'
+---
+
 # How to apply tags to all resources in your subscription
 
 Tags are a useful way to keep track of who owns what resource in a company wide Azure subscription.
@@ -8,7 +12,7 @@ You can enforce the creation of tags via the **Apply tag and its default value**
 
 We can create the tags we need at the resource group level with this:
 
-```text
+```powershell
 Get-AzureRmResourceGroup | ForEach-Object { Set-AzureRmResourceGroup -Name $_.ResourceGroupName -Tag @{ Key="value" } }
 ```
 
@@ -18,7 +22,7 @@ This will set the tag for all resource groups.
 
 Then to copy the tags at the resource groups and assign them to the resources within the groups you can run the following:
 
-```text
+```powershell
 $groups = Get-AzureRmResourceGroup
 
 foreach ($group in $groups)
@@ -44,4 +48,3 @@ foreach ($group in $groups)
 ## Further reading
 
 * [Official Microsoft documentation about tagging azure resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags)
-

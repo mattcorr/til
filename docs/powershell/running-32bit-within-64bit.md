@@ -1,3 +1,7 @@
+---
+description: 'Launch 32-bit PowerShell from a 64-bit session for compatibility-sensitive scripts.'
+---
+
 # How to run powershell in 32 bit mode within 64 bit
 
 Sometimes there are cases when you need to run some powershell code in 32 bit mode rather than the default of 64 bit. _\(this is usually for some imported DLLs that wont quite work in 64 bit like_ [_BizTalk Powershell_](https://psbiztalk.codeplex.com/)_\)_
@@ -20,4 +24,3 @@ $32bitPSCode = {
 
 Invoke-Command -ScriptBlock $32bitPSCode -ArgumentList @($value1, $value2) -ConfigurationName microsoft.powershell32 -ComputerName $env:COMPUTERNAME
 ```
-

@@ -1,3 +1,7 @@
+---
+description: 'Resynchronise a branch with the latest remote changes before pushing.'
+---
+
 # How to get the latest changes from git before you do a commit
 
 ## Issue
@@ -21,4 +25,3 @@ git pull origin master
 This will pull down any changes you have missed to the master branch _\(You can replace master with the branch you are working on\)_
 
 Then you can merge any diffs and commit to your local git, then a sync to your origin should work.
-

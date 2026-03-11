@@ -1,3 +1,7 @@
+---
+description: 'Format Jira comments and tables using Jira''s markdown-like syntax.'
+---
+
 # Formatting Jira comments with markdown like syntax
 
 ## Jira Tables
@@ -29,4 +33,3 @@ for crosses and
 ```
 
 for ticks. Useful to know.
-

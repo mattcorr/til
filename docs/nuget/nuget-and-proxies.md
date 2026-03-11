@@ -1,3 +1,7 @@
+---
+description: 'Configure NuGet to work through an authenticated corporate proxy.'
+---
+
 # Nuget and Proxies
 
 If you need to access the nuget.org from behind a corporate firewall that needs authentication, one might think you need a custom nuget.config file with your proxy server URL and user/password settings.
@@ -23,4 +27,3 @@ nuget.exe config -set http_proxy="http://proxy.server.com:8888" -ConfigFile=D:\n
 ```
 
 Then when you run your nuget restore, it should work
-

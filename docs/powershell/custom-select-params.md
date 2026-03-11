@@ -1,3 +1,7 @@
+---
+description: 'Build calculated properties with Select-Object to shape custom PowerShell output.'
+---
+
 # How to select custom attributes on an object
 
 Normally, when you use Select-Object, you are restricted to the properties of the object on the pipeline.
@@ -20,4 +24,3 @@ You can do field manipulation too, like:
 ```powershell
 $objects | Select-Object Id, Name, @{N='Age in Months', E={$_.Age * 12}}, Age, Address
 ```
-

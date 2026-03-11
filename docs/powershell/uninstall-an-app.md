@@ -1,3 +1,7 @@
+---
+description: 'Uninstall a BizTalk application with PowerShell, including 32-bit session handling.'
+---
+
 # How to uninstall a BizTalk application
 
 It can be handy as part of a BizTalk application deployment to remove an old or newer version there. This assumes you use the [BTDF](https://biztalkdeployment.codeplex.com/) for deploying an application.
@@ -146,4 +150,3 @@ else
 # It will run all the code above in a PowerShell 32 bit session. This is required for the Biztalk PowerShell
 Invoke-Command -ScriptBlock $powershell32bitCode -ArgumentList @($ApplicationName, $ApplicationVersion, $BiztalkSQlServer, $DeployDb, $msBuildPath) -ConfigurationName microsoft.powershell32 -ComputerName $env:COMPUTERNAME
 ```
-

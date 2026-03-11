@@ -1,3 +1,7 @@
+---
+description: 'Configure Visual Studio Code settings for a PowerShell-friendly editing experience.'
+---
+
 # Configure settings to auto format PowerShell code
 
 After watching an [interesting video](https://www.youtube.com/watch?v=LJNdK0QrIo8) from [Trevor Sullivan](https://trevorsullivan.net/) about how to configure [Visual Studio Code](https://code.visualstudio.com/) for PowerShell development, I found the following settings great for my personal preferences.
@@ -28,4 +32,3 @@ NOTE: Others might not prefer this type of style, but it works well for me.
 As you type and when you save PowerShell files, they are auto formatted. Also the Script Analyst is enabled.
 
 Pretty cool! :\)
-

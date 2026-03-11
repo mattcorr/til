@@ -1,3 +1,7 @@
+---
+description: 'Get a system''s uptime in PowerShell from its last reboot time.'
+---
+
 # How to check the system up time
 
 If you want to quickly and easily see how long a server has been running for since its last reboot then use this function:
@@ -10,4 +14,3 @@ function Get-SystemUptime
    Write-Output "Uptime: $($Uptime.Days) days, $($Uptime.Hours) hours, $($Uptime.Minutes) minutes"
 }
 ```
-

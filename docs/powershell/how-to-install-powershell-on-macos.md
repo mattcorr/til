@@ -1,3 +1,7 @@
+---
+description: 'Install, upgrade, reinstall, or remove PowerShell on macOS with Homebrew.'
+---
+
 # How to install PowerShell core on MacOS
 
 NOTE: Original instructions are [here](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md), I have just duplicated here for easy access.
@@ -58,4 +62,3 @@ If you are nuts and want to remove PowerShell from macOS run:
 ```bash
 brew cask uninstall powershell
 ```
-

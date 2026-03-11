@@ -1,3 +1,7 @@
+---
+description: 'Change the status of an Octopus deployment after it has finished.'
+---
+
 # How to update the deployment state in Octopus
 
 ## The issue

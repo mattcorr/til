@@ -1,3 +1,7 @@
+---
+description: 'Short technical notes and snippets for day-to-day development and infrastructure work.'
+---
+
 # What is TIL?
 
 This site is the personal **"Today I Learned"** site for Matt Corr.

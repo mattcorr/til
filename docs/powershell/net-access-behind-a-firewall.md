@@ -1,3 +1,7 @@
+---
+description: 'Send PowerShell web requests through an NTLM-authenticated corporate proxy.'
+---
+
 # How to query the Internet behind a NTLM Proxy on a corporate network
 
 Sometimes at client sites, we need to use PowerShell scripts to invoke REST APIs through a Proxy. If the Proxy required NTLM authentication it can be an utter pain to get this to work correctly.
@@ -16,4 +20,3 @@ $result = Invoke-RestMethod  -Uri $urlToCall -ContentType "application/json" -He
 ```
 
 This should give you the results you need!
-

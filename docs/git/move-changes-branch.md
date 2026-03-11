@@ -1,3 +1,7 @@
+---
+description: 'Move commits from the wrong branch onto the correct branch without losing work.'
+---
+
 # How to move commited changes to a different branch
 
 ## Issue
@@ -23,4 +27,3 @@ git checkout -b branchname
 Then commit your code again \(on the correct branch\) via Visual Studio Code or Fork.
 
 WARNING: This will mean if you undo multiple commits, they will then be batched up into one commit.
-

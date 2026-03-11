@@ -1,3 +1,7 @@
+---
+description: 'Configure SoapUI to send messages to WCF WSHttp endpoints.'
+---
+
 # How to configure SoapUI for WCF-WSHttp messages
 
 [SOAP UI](http://www.soapui.org) is a pretty good tool for manually sending mocked messages to BizTalk WCF-WSHttp endpoints.

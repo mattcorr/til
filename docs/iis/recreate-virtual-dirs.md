@@ -1,3 +1,7 @@
+---
+description: 'Recreate IIS virtual directories for BizTalk WCF service publishing.'
+---
+
 # How to re-create IIS Virtual Directories
 
 When creating Virtual Directories for BizTalk solutions with HTTP front end, the **BizTalk WCF Service Publishing Wizard** is used.

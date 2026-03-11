@@ -1,3 +1,7 @@
+---
+description: 'Repair a broken workstation trust relationship by resetting the computer account password.'
+---
+
 # How to reset your computer if it is lost on the domain
 
 ## This will fix if you get the error:
@@ -20,4 +24,3 @@ When prompted for a account provide a domain admin account
 The `Reset-ComputerMachinePassword` command will do what it says.
 
 Once done, log out then try to log back in with a domain account and it should be accepted.
-

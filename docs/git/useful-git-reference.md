@@ -1,3 +1,7 @@
+---
+description: 'Handy Git commands for configuration, submodules, and undoing changes.'
+---
+
 # Git command reference
 
 ## Summary
@@ -62,4 +66,3 @@ git reset --hard HEAD~1
 ```
 
 But be really sure you want to do it as there is no undo.
-

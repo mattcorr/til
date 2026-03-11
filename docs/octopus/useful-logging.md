@@ -1,3 +1,7 @@
+---
+description: 'Improve Octopus script logging so real errors stand out in deployment output.'
+---
+
 # Error logging in Octopus
 
 ## Issue
@@ -26,4 +30,3 @@ else
 ## Reference
 
 * [Octopus documentation about script error handling](https://octopus.com/docs/deploying-applications/custom-scripts#Customscripts-ErrorhandlinginPowerShellscripts)
-
