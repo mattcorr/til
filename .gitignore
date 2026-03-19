@@ -11,5 +11,5 @@
 .browse
 .vscode
 .VC.db
-.venv/
+.venv/*
 site/
