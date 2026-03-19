@@ -12,7 +12,7 @@ This site is for Matt to try and recall these snippets and help others in the pr
 
 ## So what sort of content will be here?
 
-My basic rule is this: if it is a small snippet with just some text and some code, I'll put it here. If it requires a bit of effort to document, it will more likely be on my [main blog](https://www.intrepidintegration.com).
+My basic rule is this: if it is a small snippet with just some text and some code, I'll put it here. If it requires a bit of effort to document, it will more likely be on my [main blog](https://blog.mattcorr.com).
 
 There is only ever one category for TIL snippets. Keeps things simple and easy to digest.
 
