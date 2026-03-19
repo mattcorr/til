@@ -7,7 +7,7 @@ description: 'Build calculated properties with Select-Object to shape custom Pow
 Normally, when you use Select-Object, you are restricted to the properties of the object on the pipeline.
 i.e.
 ```powershell
-objects | Select-Object Id, Name, Age, Address
+$objects | Select-Object Id, Name, Age, Address
 ```
 
 But if you want to display a child object's property or do a simple calculation on a field ,can that be done on a `Select-Object`?

@@ -14,13 +14,15 @@ A good example of this is BizTalk deployments where an app getting deployed will
 
 ## Process
 
-Get the Server-Task Id from the Deployment record
+Get the `$serverTaskId` from the Deployment record
 
 then run the following _\(obviously alter it a bit based on your needs\)_ :
 
 ```powershell
 $apikey = 'APIHFHFHFHFHFHFHFHFH'
 $header = @{"X-Octopus-ApiKey"=$apikey}
+$instanceName = "SampleSite"
+$serverTaskId = 67 # get from the deployment record
 
 $serverTaskId = 'ServerTasks-1638'
 $octopusUri = "https://$instanceName.octopus.com/api/tasks/$serverTaskId/state"
