@@ -23,7 +23,7 @@ if ($errorOccured)
 }
 else
 {
-    Write-Host "All validation passed. Continuing the deployment.
+    Write-Host "All validation passed. Continuing the deployment."
 }
 ```
 
