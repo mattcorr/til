@@ -6,7 +6,7 @@ description: 'Get a system''s uptime in PowerShell from its last reboot time.'
 
 If you want to quickly and easily see how long a server has been running for since its last reboot then use this function:
 
-!!! note Note
+!!! note "Important Note"
     This has been updated in March 2026 to use a more modern cmdlet. (**Get-WmiObject** is now obsolete)
    
 
